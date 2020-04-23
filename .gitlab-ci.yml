@@ -1,0 +1,9 @@
+image: "ruby:2.5"
+
+before_script:
+  - scons platform=osx target=debug --jobs=$(sysctl -n hw.logicalcpu)
+
+runGo:
+  script:
+    - ./bin/godot.osx.tools.64 
+
