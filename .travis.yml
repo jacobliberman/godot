@@ -71,15 +71,7 @@ matrix:
 #          packages:
 #            - scons
 
-    - name: Linux export template (release_debug, GCC 7, without 3D support)
-      stage: build
-      env: PLATFORM=linuxbsd TOOLS=no TARGET=release_debug CACHE_NAME=${PLATFORM}-gcc-7 EXTRA_ARGS="disable_3d=yes"
-      os: linux
-      compiler: gcc
-      addons:
-        apt:
-          packages:
-            - *linux_deps
+
 
 #    - name: Javascript export template (release, emscripten latest)
 #      stage: build
